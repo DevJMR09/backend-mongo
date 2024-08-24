@@ -14,7 +14,7 @@ exports.agregarClientes = async (req, res) => {
     try {
         let clientes;
         clientes = new Cliente(req.body);
-        await cliente.save();
+        await clientes.save();
         res.json(clientes);
     } catch (error) {
         console.log(error);
